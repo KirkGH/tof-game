@@ -11,8 +11,10 @@ def get_tof_statements():
 def get_general_statements():
     statements = []
     statements.append(["What is the capital of Spain?", "MADRID"])
-    statements.append(["test 2", "TEST"])
-    statements.append(["test 3", "TEST"])
+    statements.append(["What comes after A?", "B"])
+    statements.append(["Who was the first U.S. President?", "GEORGE WASHINGTON"])
+
+    return statements
 
 def play_tof_quiz():
     tof_statements = get_tof_statements()
@@ -30,6 +32,7 @@ def play_tof_quiz():
 
 def play_general_quiz():
     general_statements = get_general_statements()
+    random.shuffle(general_statements)
     score = 0
     for s in general_statements:
         print(s[0])
